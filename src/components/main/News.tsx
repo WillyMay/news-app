@@ -11,7 +11,7 @@ function News() {
   const fetchData = async () => {
     try {
       const response = await fetch(
-        "https://newsapi.org/v2/everything?q=keyword&apiKey=24897e7e79cf47d79a805ccd483ab2d4"
+        "https://newsapi.org/v2/top-headlines?country=ar&apiKey=24897e7e79cf47d79a805ccd483ab2d4"
       );
 
       // Check if the response is successful (status code 200-299)
@@ -28,13 +28,14 @@ function News() {
       console.error("Error fetching data:");
     }
   };
+  console.log(data)
 
   return (
     <div>
       {data ? (
         // Display the fetched data
 
-          <Cards news={data} />
+          <Cards news={data}/>
 
       ) : (
         // Display a loading message or other UI while data is being fetched
