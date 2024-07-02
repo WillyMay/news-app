@@ -6,7 +6,7 @@ function Cards(props: any) {
 
    const ListedNews = newsList.map((news: any) => <li key={v4()}>{news.title}</li>)
 
-    return <h1 className="text-lg">{ListedNews}</h1>;
+    return <h1 className="text-lg font-bold">{ListedNews}</h1>;
 }
 
 export default Cards;
